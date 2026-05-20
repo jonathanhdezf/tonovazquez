@@ -223,43 +223,86 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contactForm');
   const formAlert = document.getElementById('formAlert');
   const submitBtn = document.getElementById('submitBtn');
+  const whatsappNumber = '522311234567';
+  const contactEmail = 'contacto@tonovazquez.mx';
 
-  contactForm?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Disable button during animation
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = 'Enviando... <i data-lucide="loader" class="animate-spin" style="margin-left: 8px; width: 18px; height: 18px;"></i>';
+  const setSubmitButton = (isSending) => {
+    if (!submitBtn) return;
+
+    submitBtn.disabled = isSending;
+    submitBtn.innerHTML = isSending
+      ? 'Preparando mensaje... <i data-lucide="loader" class="animate-spin" style="margin-left: 8px; width: 18px; height: 18px;"></i>'
+      : 'Enviar Mensaje <i data-lucide="send" style="margin-left: 8px; width: 18px; height: 18px;"></i>';
+
     if (window.lucide) {
       lucide.createIcons();
     }
+  };
 
-    const name = document.getElementById('nameInput').value.trim();
+  const showFormAlert = (type, content) => {
+    if (!formAlert) return;
 
-    // Simulate Network Request
+    formAlert.className = `form-alert ${type}`;
+    formAlert.innerHTML = content;
+    formAlert.style.display = 'block';
+    formAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  };
+
+  const escapeHtml = (value) => {
+    const div = document.createElement('div');
+    div.textContent = value;
+    return div.innerHTML;
+  };
+
+  const getContactPayload = () => {
+    const name = document.getElementById('nameInput')?.value.trim() || '';
+    const email = document.getElementById('emailInput')?.value.trim() || '';
+    const phone = document.getElementById('telInput')?.value.trim() || '';
+    const message = document.getElementById('messageInput')?.value.trim() || '';
+
+    return { name, email, phone, message };
+  };
+
+  const buildContactMessage = ({ name, email, phone, message }) => (
+    [
+      'Hola Toño, me gustaría dejar un comentario desde la página web.',
+      '',
+      `Nombre: ${name}`,
+      `Correo: ${email}`,
+      `Teléfono: ${phone || 'No proporcionado'}`,
+      '',
+      `Mensaje: ${message}`
+    ].join('\n')
+  );
+
+  contactForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (!contactForm.checkValidity()) {
+      contactForm.reportValidity();
+      return;
+    }
+
+    const payload = getContactPayload();
+    const contactMessage = buildContactMessage(payload);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(contactMessage)}`;
+    const emailUrl = `mailto:${contactEmail}?subject=${encodeURIComponent(`Mensaje ciudadano de ${payload.name}`)}&body=${encodeURIComponent(contactMessage)}`;
+
+    setSubmitButton(true);
+
     setTimeout(() => {
-      formAlert.className = 'form-alert success';
-      formAlert.innerHTML = `¡Gracias, <strong>${name}</strong>! Hemos recibido tu mensaje. Nos comunicaremos contigo a la brevedad.`;
-      
-      // Reset Form
+      showFormAlert('success', `
+        <strong>Gracias, ${escapeHtml(payload.name)}.</strong>
+        Tu mensaje está listo para enviarse por WhatsApp o correo.
+        <div class="form-alert-actions">
+          <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" class="form-alert-link">Enviar por WhatsApp</a>
+          <a href="${emailUrl}" class="form-alert-link secondary">Enviar por correo</a>
+        </div>
+      `);
+
       contactForm.reset();
-      
-      // Reset button
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = 'Enviar Mensaje <i data-lucide="send" style="margin-left: 8px; width: 18px; height: 18px;"></i>';
-      if (window.lucide) {
-        lucide.createIcons();
-      }
-      
-      // Scroll to alert
-      formAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-      // Fade out alert after 8 seconds
-      setTimeout(() => {
-        formAlert.style.display = 'none';
-      }, 8000);
-
-    }, 1500);
+      setSubmitButton(false);
+    }, 450);
   });
 
   /* ==========================================================================
