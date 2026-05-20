@@ -175,10 +175,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!videoCards.length) return;
 
       currentVideoIndex = (index + videoCards.length) % videoCards.length;
-      videoCards[currentVideoIndex].scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'start'
+      officialVideoCarousel.scrollTo({
+        left: videoCards[currentVideoIndex].offsetLeft - officialVideoCarousel.offsetLeft,
+        behavior: 'smooth'
       });
     };
 

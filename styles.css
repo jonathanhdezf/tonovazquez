@@ -1123,6 +1123,8 @@ p {
 .social-btn svg {
   width: 21px;
   height: 21px;
+  color: #ffffff;
+  stroke: currentColor;
   stroke-width: 2.4;
 }
 
