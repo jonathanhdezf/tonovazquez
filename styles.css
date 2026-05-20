@@ -1120,10 +1120,33 @@ p {
   box-shadow: 0 4px 10px rgba(10,25,47,0.15);
 }
 
+.social-btn svg {
+  width: 21px;
+  height: 21px;
+  stroke-width: 2.4;
+}
+
+.social-btn[aria-label="Facebook"] {
+  background: #1877f2;
+}
+
+.social-btn[aria-label="Twitter"] {
+  background: #0f172a;
+  border: 1px solid rgba(15, 23, 42, 0.18);
+}
+
+.social-btn[aria-label="Instagram"] {
+  background: linear-gradient(135deg, #833ab4 0%, #e1306c 48%, #f77737 100%);
+}
+
+.social-btn[aria-label="Youtube"] {
+  background: #ff0033;
+}
+
 .social-btn:hover {
-  background: var(--accent-warm);
   transform: translateY(-6px) rotate(8deg);
-  box-shadow: 0 8px 20px rgba(249,115,22,0.3);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.28);
+  filter: brightness(1.08);
 }
 
 /* Contact Form Card */
