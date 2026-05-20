@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Página oficial de resultados de Toño Vazquez para Teziutlán. Infraestructura, transparencia y compromiso social con la sierra.">
+  <title>Toño Vázquez - Resultados para Teziutlán</title>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Lucide Icons Library -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="main-nav" id="mainNav">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        Toño<span>Vázquez</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="#" class="nav-link active" data-sec="inicio">Inicio</a></li>
+        <li><a href="#obras" class="nav-link" data-sec="obras">Obras</a></li>
+        <li><a href="#redes" class="nav-link" data-sec="redes">Redes</a></li>
+        <li><a href="#comunidad" class="nav-link" data-sec="comunidad">Comunidad</a></li>
+        <li><a href="#contacto" class="nav-link" data-sec="contacto">Contacto</a></li>
+      </ul>
+      
+      <button class="mobile-menu-btn" id="menuBtn" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#" class="nav-link" data-sec="inicio">Inicio</a>
+    <a href="#obras" class="nav-link" data-sec="obras">Obras</a>
+    <a href="#redes" class="nav-link" data-sec="redes">Redes</a>
+    <a href="#comunidad" class="nav-link" data-sec="comunidad">Comunidad</a>
+    <a href="#contacto" class="nav-link" data-sec="contacto">Contacto</a>
+  </div>
+
+  <!-- ==========================================================================
+       HERO SECTION (Inicio)
+       ========================================================================== -->
+  <header class="hero" id="inicio">
+    <div class="hero-parallax-bg" id="heroBg"></div>
+    <div class="hero-overlay-grid"></div>
+    
+    <div class="hero-container">
+      <span class="hero-tag float-soft">Gestión y Compromiso</span>
+      <h1 class="hero-title reveal active">
+        Toño Vázquez:<br><span>Resultados para Teziutlán</span>
+      </h1>
+      <p class="hero-description reveal active delay-100">
+        Con hechos, esfuerzo y obras transformamos nuestro municipio. Transparencia, cercanía y modernidad en cada rincón de la Sierra.
+      </p>
+      
+      <div class="hero-ctas reveal active delay-200">
+        <a href="#obras" class="btn btn-primary">
+          Conoce las Obras <i data-lucide="arrow-right" style="margin-left: 8px; width: 18px; height: 18px;"></i>
+        </a>
+        <a href="#comunidad" class="btn btn-secondary">
+          Voz Ciudadana
+        </a>
+      </div>
+    </div>
+    
+    <a href="#obras" class="hero-scroll-indicator">
+      <span>Desliza para ver más</span>
+      <i data-lucide="chevron-down"></i>
+    </a>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         SECCIÓN DE OBRAS (Interactiva)
+         ========================================================================== */ -->
+    <section class="section section-dark" id="obras">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Compromiso en Acción</span>
+        <h2 class="section-title">Infraestructura y <span>Obras Públicas</span></h2>
+        <p class="section-desc">
+          Galería interactiva de proyectos ejecutados en Teziutlán. Haz clic o pasa el cursor sobre las tarjetas para conocer el impacto de cada obra.
+        </p>
+      </div>
+
+      <!-- Filters -->
+      <div class="gallery-filters reveal delay-100">
+        <button class="filter-btn active" data-filter="all">Todos</button>
+        <button class="filter-btn" data-filter="infra">Infraestructura vial</button>
+        <button class="filter-btn" data-filter="edu">Educación</button>
+        <button class="filter-btn" data-filter="social">Cercanía y Social</button>
+      </div>
+
+      <!-- Obras Grid -->
+      <div class="obras-grid">
+        
+        <!-- Obra 1: Mapa Aéreo (Large) -->
+        <div class="obra-card glass-panel-dark obra-card-large reveal" data-category="infra">
+          <div class="obra-img-wrapper">
+            <img src="Toño Vazquez/WhatsApp Image 2026-05-13 at 3.41.07 PM (1).jpeg" alt="Mapa Aéreo de Obras Teziutlán" class="obra-img">
+          </div>
+          <div class="obra-overlay"></div>
+          <div class="obra-content">
+            <span class="obra-tag">Infraestructura</span>
+            <h3 class="obra-title">Plano Estratégico de Obra Pública</h3>
+            <p class="obra-summary">
+              Visión integral de conectividad y desarrollo urbano mediante la reconstrucción de vialidades, puentes peatonales y clínicas de salud en todo el municipio.
+            </p>
+            <div class="obra-details">
+              <div class="obra-detail">
+                <span>Inversión</span> Histórica
+              </div>
+              <div class="obra-detail">
+                <span>Alcance</span> Teziutlán Centro y Juntas Auxiliares
+              </div>
+              <div class="obra-detail">
+                <span>Estado</span> 100% Concluido
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Obra 2: Puente Peatonal -->
+        <div class="obra-card glass-panel-dark reveal delay-100" data-category="infra">
+          <div class="obra-img-wrapper">
+            <img src="Toño Vazquez/WhatsApp Image 2026-05-13 at 3.41.08 PM (6).jpeg" alt="Puente Peatonal en Teziutlán" class="obra-img">
+          </div>
+          <div class="obra-overlay"></div>
+          <div class="obra-content">
+            <span class="obra-tag">Seguridad Vial</span>
+            <h3 class="obra-title">Puente Peatonal de la Sierra</h3>
+            <p class="obra-summary">
+              Infraestructura peatonal elevada sobre el boulevard para garantizar el cruce seguro de estudiantes, familias y trabajadores en zonas de alta afluencia y neblina.
+            </p>
+            <div class="obra-details">
+              <div class="obra-detail">
+                <span>Vialidad</span> Boulevard Principal
+              </div>
+              <div class="obra-detail">
+                <span>Beneficiados</span> +10,000 Habitantes
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Obra 3: Pavimentación de Calles -->
+        <div class="obra-card glass-panel-dark reveal delay-200" data-category="infra">
+          <div class="obra-img-wrapper">
+            <img src="Toño Vazquez/WhatsApp Image 2026-05-13 at 3.41.06 PM (4).jpeg" alt="Calle de Concreto Hidráulico" class="obra-img">
+          </div>
+          <div class="obra-overlay"></div>
+          <div class="obra-content">
+            <span class="obra-tag">Urbanización</span>
+            <h3 class="obra-title">Vialidades de Concreto Hidráulico</h3>
+            <p class="obra-summary">
+              Sustitución de terracerías y asfalto deteriorado por concreto hidráulico de alta resistencia, asegurando calles limpias y transitables por décadas.
+            </p>
+            <div class="obra-details">
+              <div class="obra-detail">
+                <span>Material</span> Concreto MR-45
+              </div>
+              <div class="obra-detail">
+                <span>Durabilidad</span> +30 Años
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Obra 4: Caminos Rurales -->
+        <div class="obra-card glass-panel-dark reveal" data-category="social">
+          <div class="obra-img-wrapper">
+            <img src="Toño Vazquez/WhatsApp Image 2026-05-13 at 3.41.08 PM (3).jpeg" alt="Caminos rurales dignos" class="obra-img">
+          </div>
+          <div class="obra-overlay"></div>
+          <div class="obra-content">
+            <span class="obra-tag">Comunidad</span>
+            <h3 class="obra-title">Conexión e Inclusión Rural</h3>
+            <p class="obra-summary">
+              Construcción de accesos dignos en las zonas altas y juntas auxiliares de Teziutlán, facilitando el traslado y fomentando la economía local de productores.
+            </p>
+            <div class="obra-details">
+              <div class="obra-detail">
+                <span>Zonas</span> Juntas Auxiliares
+              </div>
+              <div class="obra-detail">
+                <span>Impacto</span> Desarrollo Agrícola
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Obra 5: Techado de Escuelas -->
+        <div class="obra-card glass-panel-dark reveal delay-100" data-category="edu">
+          <div class="obra-img-wrapper">
+            <img src="Toño Vazquez/WhatsApp Image 2026-05-13 at 3.41.06 PM.jpeg" alt="Techados Escolares Teziutlán" class="obra-img">
+          </div>
+          <div class="obra-overlay"></div>
+          <div class="obra-content">
+            <span class="obra-tag">Educación</span>
+            <h3 class="obra-title">Techado en Patios Escolares</h3>
+            <p class="obra-summary">
+              Techado de plazas cívicas y canchas en escuelas públicas para proteger a los alumnos del sol intenso y de las constantes lluvias y neblinas serranas.
+            </p>
+            <div class="obra-details">
+              <div class="obra-detail">
+                <span>Nivel</span> Preescolar y Primaria
+              </div>
+              <div class="obra-detail">
+                <span>Instalaciones</span> Estructura Metálica
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Obra 6: Supervisión de Cemento -->
+        <div class="obra-card glass-panel-dark reveal delay-200" data-category="social">
+          <div class="obra-img-wrapper">
+            <img src="Toño Vazquez/WhatsApp Image 2026-05-13 at 3.41.07 PM (8).jpeg" alt="Supervisión de obras" class="obra-img">
+          </div>
+          <div class="obra-overlay"></div>
+          <div class="obra-content">
+            <span class="obra-tag">Cercanía</span>
+            <h3 class="obra-title">Supervisión Directa en Campo</h3>
+            <p class="obra-summary">
+              Inspección a ras de suelo junto con comités vecinales y trabajadores para asegurar que cada bulto de cemento y material cumpla con los estándares.
+            </p>
+            <div class="obra-details">
+              <div class="obra-detail">
+                <span>Supervisión</span> 100% Presencial
+              </div>
+              <div class="obra-detail">
+                <span>Criterio</span> Calidad y Transparencia
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN "REDES SOCIALES" (Facebook Feed)
+         ========================================================================== -->
+    <section class="section social-feed-section" id="redes">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Conexión Digital</span>
+        <h2 class="section-title">Toño en las <span>Redes Sociales</span></h2>
+        <p class="section-desc">
+          Sigue el día a día de nuestro trabajo y mantente informado con publicaciones en tiempo real desde nuestras cuentas oficiales.
+        </p>
+      </div>
+
+      <!-- Video Destacado Section -->
+      <div class="official-videos reveal" aria-label="Videos oficiales de obras">
+        <div class="video-carousel-header">
+          <div>
+            <span class="video-badge float-soft"><i data-lucide="video" style="width: 14px; height: 14px; margin-right: 6px;"></i> Videos Oficiales</span>
+            <h3 class="video-title">Obras en video desde redes</h3>
+          </div>
+          <div class="video-carousel-controls" aria-label="Controles del carrusel">
+            <button type="button" class="video-control-btn" id="videoPrev" aria-label="Video anterior">
+              <i data-lucide="chevron-left"></i>
+            </button>
+            <button type="button" class="video-control-btn" id="videoNext" aria-label="Video siguiente">
+              <i data-lucide="chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="video-carousel" id="officialVideoCarousel">
+          <article class="featured-video-block glass-panel-dark">
+            <div class="featured-video-info">
+              <span class="video-kicker">Obra N° 29</span>
+              <h4 class="video-card-title">Supervisión y avance oficial</h4>
+              <p class="video-desc">Registro en video del trabajo realizado para informar con claridad el progreso de esta obra.</p>
+              <a href="https://www.facebook.com/reel/1687564462559174" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                Ver en Facebook <i data-lucide="external-link" style="margin-left: 8px; width: 16px; height: 16px;"></i>
+              </a>
+            </div>
+            <div class="featured-video-player">
+              <div class="fb-video-container vertical">
+                <iframe title="Obra 29 en Facebook" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1687564462559174&show_text=false&width=267" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-video-block glass-panel-dark">
+            <div class="featured-video-info">
+              <span class="video-kicker">Atoluca</span>
+              <h4 class="video-card-title">Resultados para la comunidad</h4>
+              <p class="video-desc">Avances compartidos desde Atoluca para mantener informadas a las familias beneficiadas.</p>
+              <a href="https://www.facebook.com/reel/966716706145810" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                Ver en Facebook <i data-lucide="external-link" style="margin-left: 8px; width: 16px; height: 16px;"></i>
+              </a>
+            </div>
+            <div class="featured-video-player">
+              <div class="fb-video-container vertical">
+                <iframe title="Atoluca en Facebook" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F966716706145810&show_text=false&width=267" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-video-block glass-panel-dark">
+            <div class="featured-video-info">
+              <span class="video-kicker">Obra N° 25</span>
+              <h4 class="video-card-title">Arco Sur</h4>
+              <p class="video-desc">Evidencia visual del avance en Arco Sur, una intervención clave para la movilidad y conexión urbana.</p>
+              <a href="https://www.facebook.com/reel/999559965923401" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                Ver en Facebook <i data-lucide="external-link" style="margin-left: 8px; width: 16px; height: 16px;"></i>
+              </a>
+            </div>
+            <div class="featured-video-player">
+              <div class="fb-video-container vertical">
+                <iframe title="Obra 25 Arco Sur en Facebook" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F999559965923401&show_text=false&width=267" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-video-block glass-panel-dark">
+            <div class="featured-video-info">
+              <span class="video-kicker">Obra N° 22</span>
+              <h4 class="video-card-title">Seguimiento de obra pública</h4>
+              <p class="video-desc">Reporte en video del trabajo realizado y de los beneficios directos para la ciudadanía.</p>
+              <a href="https://www.facebook.com/reel/1010653538581089" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                Ver en Facebook <i data-lucide="external-link" style="margin-left: 8px; width: 16px; height: 16px;"></i>
+              </a>
+            </div>
+            <div class="featured-video-player">
+              <div class="fb-video-container vertical">
+                <iframe title="Obra 22 en Facebook" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1010653538581089&show_text=false&width=267" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-video-block glass-panel-dark">
+            <div class="featured-video-info">
+              <span class="video-kicker">Obra N° 20</span>
+              <h4 class="video-card-title">Compromiso cumplido</h4>
+              <p class="video-desc">Un recorrido visual por los avances y la supervisión cercana de esta obra municipal.</p>
+              <a href="https://www.facebook.com/reel/1494269925725763" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                Ver en Facebook <i data-lucide="external-link" style="margin-left: 8px; width: 16px; height: 16px;"></i>
+              </a>
+            </div>
+            <div class="featured-video-player">
+              <div class="fb-video-container vertical">
+                <iframe title="Obra 20 en Facebook" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1494269925725763&show_text=false&width=267" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-video-block glass-panel-dark">
+            <div class="featured-video-info">
+              <span class="video-kicker">Obra N° 18</span>
+              <h4 class="video-card-title">Avance oficial documentado</h4>
+              <p class="video-desc">Video de seguimiento para mostrar el impacto y la ejecución de los compromisos asumidos.</p>
+              <a href="https://www.facebook.com/reel/1240454777915646" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                Ver en Facebook <i data-lucide="external-link" style="margin-left: 8px; width: 16px; height: 16px;"></i>
+              </a>
+            </div>
+            <div class="featured-video-player">
+              <div class="fb-video-container vertical">
+                <iframe title="Obra 18 en Facebook" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1240454777915646&show_text=false&width=267" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+              </div>
+            </div>
+          </article>
+
+          <article class="featured-video-block glass-panel-dark">
+            <div class="featured-video-info">
+              <span class="video-kicker">Obra N° 16</span>
+              <h4 class="video-card-title">Transformación en marcha</h4>
+              <p class="video-desc">Publicación oficial con el avance de la obra y la supervisión realizada en campo.</p>
+              <a href="https://www.facebook.com/reel/1019702070384248" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                Ver en Facebook <i data-lucide="external-link" style="margin-left: 8px; width: 16px; height: 16px;"></i>
+              </a>
+            </div>
+            <div class="featured-video-player">
+              <div class="fb-video-container vertical">
+                <iframe title="Obra 16 en Facebook" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1019702070384248&show_text=false&width=267" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="social-grid">
+        
+        <!-- Post 1 -->
+        <div class="social-card glass-panel-dark reveal">
+          <div class="post-header">
+            <div class="post-author-info">
+              <div class="post-avatar">TV</div>
+              <div class="post-user-details">
+                <span class="post-user-name">Toño Vázquez <span class="post-verified" title="Página verificada"><i data-lucide="badge-check"></i></span></span>
+                <span class="post-date">Hace 2 días</span>
+              </div>
+            </div>
+            <i data-lucide="facebook" class="post-fb-icon"></i>
+          </div>
+          <p class="post-text">
+            Muy contento de entregar el techado de la plaza cívica en beneficio de nuestros niños. Ahora podrán realizar sus actividades cívicas y deportivas protegidos del clima. ¡Seguimos trabajando con resultados reales para Teziutlán! 🇲🇽🏫 <a href="https://www.facebook.com/tono.vazquez.1213" target="_blank" rel="noopener noreferrer">#ResultadosToño</a> <a href="https://www.facebook.com/tono.vazquez.1213" target="_blank" rel="noopener noreferrer">#TeziutlánDigno</a>
+          </p>
+          <div class="post-media-box">
+            <img src="Toño Vazquez/WhatsApp Image 2026-05-13 at 3.41.06 PM.jpeg" alt="Entrega de techado" class="post-media-img">
+          </div>
+          <div class="post-actions">
+            <div class="post-stats">
+              <span class="post-stat"><i data-lucide="thumbs-up" style="width: 14px; height: 14px;"></i> 342</span>
+              <span class="post-stat"><i data-lucide="message-circle" style="width: 14px; height: 14px;"></i> 48</span>
+            </div>
+            <a href="https://www.facebook.com/tono.vazquez.1213" target="_blank" rel="noopener noreferrer" class="post-link-btn">
+              Ver en Facebook <i data-lucide="external-link" style="width: 12px; height: 12px;"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="social-card glass-panel-dark reveal delay-100">
+          <div class="post-header">
+            <div class="post-author-info">
+              <div class="post-avatar">TV</div>
+              <div class="post-user-details">
+                <span class="post-user-name">Toño Vázquez <span class="post-verified" title="Página verificada"><i data-lucide="badge-check"></i></span></span>
+                <span class="post-date">Hace 5 días</span>
+              </div>
+            </div>
+            <i data-lucide="facebook" class="post-fb-icon"></i>
+          </div>
+          <p class="post-text">
+            Así avanza la transformación urbana de nuestra querida ciudad. Cada punto marcado representa un compromiso cumplido: calles pavimentadas, puentes seguros y espacios de salud dignos. ¡El desarrollo no se detiene! 🗺️👷‍♂️ <a href="https://www.facebook.com/tono.vazquez.1213" target="_blank" rel="noopener noreferrer">#TeziutlánEnMarcha</a> <a href="https://www.facebook.com/tono.vazquez.1213" target="_blank" rel="noopener noreferrer">#CompromisoCumplido</a>
+          </p>
+          <div class="post-media-box">
+            <img src="Toño Vazquez/WhatsApp Image 2026-05-13 at 3.41.07 PM (1).jpeg" alt="Plano aéreo de obras" class="post-media-img">
+          </div>
+          <div class="post-actions">
+            <div class="post-stats">
+              <span class="post-stat"><i data-lucide="thumbs-up" style="width: 14px; height: 14px;"></i> 512</span>
+              <span class="post-stat"><i data-lucide="message-circle" style="width: 14px; height: 14px;"></i> 67</span>
+            </div>
+            <a href="https://www.facebook.com/tono.vazquez.1213" target="_blank" rel="noopener noreferrer" class="post-link-btn">
+              Ver en Facebook <i data-lucide="external-link" style="width: 12px; height: 12px;"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="social-card glass-panel-dark reveal delay-200">
+          <div class="post-header">
+            <div class="post-author-info">
+              <div class="post-avatar">TV</div>
+              <div class="post-user-details">
+                <span class="post-user-name">Toño Vázquez <span class="post-verified" title="Página verificada"><i data-lucide="badge-check"></i></span></span>
+                <span class="post-date">Hace 1 semana</span>
+              </div>
+            </div>
+            <i data-lucide="facebook" class="post-fb-icon"></i>
+          </div>
+          <p class="post-text">
+            No hay mejor satisfacción que caminar por las nuevas calles pavimentadas junto a los vecinos que las soñaron por años. Su sonrisa y agradecimiento son el motor para seguir dando el 100%. ¡Gracias por el cálido recibimiento! 🤝❤️ <a href="https://www.facebook.com/tono.vazquez.1213" target="_blank" rel="noopener noreferrer">#CercaníaYResultados</a> <a href="https://www.facebook.com/tono.vazquez.1213" target="_blank" rel="noopener noreferrer">#ToñoVázquez</a>
+          </p>
+          <div class="post-media-box">
+            <img src="Toño Vazquez/WhatsApp Image 2026-05-13 at 3.41.08 PM (3).jpeg" alt="Recorrido con vecinos" class="post-media-img">
+          </div>
+          <div class="post-actions">
+            <div class="post-stats">
+              <span class="post-stat"><i data-lucide="thumbs-up" style="width: 14px; height: 14px;"></i> 423</span>
+              <span class="post-stat"><i data-lucide="message-circle" style="width: 14px; height: 14px;"></i> 39</span>
+            </div>
+            <a href="https://www.facebook.com/tono.vazquez.1213" target="_blank" rel="noopener noreferrer" class="post-link-btn">
+              Ver en Facebook <i data-lucide="external-link" style="width: 12px; height: 12px;"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN "COMUNIDAD Y VOCES" (Testimoniales)
+         ========================================================================== -->
+    <section class="section voices-section" id="comunidad">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Voz del Pueblo</span>
+        <h2 class="section-title">Comunidad y <span>Voces Ciudadanas</span></h2>
+        <p class="section-desc">
+          Escuchar a la gente es el motor de nuestro trabajo. Conoce las opiniones y testimonios de los ciudadanos sobre la transformación de Teziutlán.
+        </p>
+      </div>
+
+      <div class="voices-container">
+        
+        <!-- Bubble 1 -->
+        <div class="testimonial-bubble glass-panel float-soft reveal-left">
+          <p class="testimonial-quote">
+            "¡El puente peatonal nos cambió la vida por completo! Mis hijos ahora pueden cruzar el boulevard muy seguros para ir a la escuela sin el miedo de los autos, sobre todo en los días de mucha neblina."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">ME</div>
+            <div class="author-info">
+              <h4>María Elena Juárez</h4>
+              <p>Vecina del Barrio de Chignaulingo</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bubble 2 -->
+        <div class="testimonial-bubble glass-panel float-medium reveal-right">
+          <p class="testimonial-quote">
+            "Llevábamos años solicitando la pavimentación de nuestra calle y no nos hacían caso. Con Toño finalmente se hizo realidad, con concreto de buena calidad y banquetas bien hechas. ¡Muchas gracias!"
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar testimonial-avatar-cyan">RM</div>
+            <div class="author-info">
+              <h4>Don Ruperto Martínez</h4>
+              <p>Comerciante, Sección Segunda</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bubble 3 -->
+        <div class="testimonial-bubble glass-panel float-strong reveal-left">
+          <p class="testimonial-quote">
+            "El techado del patio escolar ayuda muchísimo a que los niños puedan hacer sus actividades de educación física y recreo sin mojarse por las lluvias serranas. Es un gran acierto para la escuela."
+          </p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar testimonial-avatar-navy">LM</div>
+            <div class="author-info">
+              <h4>Mtra. Leticia Mendoza</h4>
+              <p>Directora de Escuela Primaria</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="voices-cta reveal">
+        <div class="voices-cta-card glass-panel">
+          <h3 class="voices-cta-title">¿Tienes una propuesta o comentario?</h3>
+          <p class="voices-cta-desc">Tu participación es fundamental para seguir construyendo el Teziutlán que todos merecemos. ¡Queremos escucharte!</p>
+          <a href="#contacto" class="btn btn-primary float-soft">
+            Participa y opina <i data-lucide="message-square" style="margin-left: 8px; width: 18px; height: 18px;"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECCIÓN DE CONTACTO (Acercamiento)
+         ========================================================================== -->
+    <section class="section contact-section" id="contacto">
+      <div class="section-header reveal">
+        <span class="section-subtitle">Contacto Directo</span>
+        <h2 class="section-title">Estamos para <span>Escucharte</span></h2>
+        <p class="section-desc">
+          Escríbeme tus dudas, propuestas o peticiones. Tu mensaje llegará directamente a mi equipo de atención ciudadana.
+        </p>
+      </div>
+
+      <div class="contact-container">
+        
+        <!-- Left: Info Card -->
+        <div class="contact-info-card glass-panel reveal-left">
+          <div class="contact-info-header">
+            <h3>Atención Ciudadana</h3>
+            <p>Mantengamos el canal abierto. La comunicación directa y sincera genera los mejores resultados para Teziutlán.</p>
+          </div>
+          
+          <div class="contact-channels">
+            
+            <a href="https://wa.me/522311234567" target="_blank" rel="noopener noreferrer" class="contact-channel">
+              <div class="contact-icon">
+                <i data-lucide="phone"></i>
+              </div>
+              <div class="channel-details">
+                <h4>WhatsApp Directo</h4>
+                <p>231 123 4567</p>
+              </div>
+            </a>
+
+            <div class="contact-channel">
+              <div class="contact-icon">
+                <i data-lucide="mail"></i>
+              </div>
+              <div class="channel-details">
+                <h4>Correo Electrónico</h4>
+                <p>contacto@tonovazquez.mx</p>
+              </div>
+            </div>
+
+            <div class="contact-channel">
+              <div class="contact-icon">
+                <i data-lucide="map-pin"></i>
+              </div>
+              <div class="channel-details">
+                <h4>Oficina de Enlace</h4>
+                <p>Teziutlán, Puebla, México</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.facebook.com/tono.vazquez.1213" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="https://www.facebook.com/tono.vazquez.1213" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            <a href="https://www.facebook.com/tono.vazquez.1213" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="https://www.facebook.com/tono.vazquez.1213" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Youtube"><i data-lucide="youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="contact-form-card glass-panel reveal-right">
+          <form id="contactForm">
+            <div class="form-alert" id="formAlert"></div>
+            
+            <div class="form-group">
+              <input type="text" id="nameInput" class="form-input" placeholder=" " required>
+              <label for="nameInput" class="form-label">Nombre Completo</label>
+            </div>
+
+            <div class="form-group">
+              <input type="email" id="emailInput" class="form-input" placeholder=" " required>
+              <label for="emailInput" class="form-label">Correo Electrónico</label>
+            </div>
+
+            <div class="form-group">
+              <input type="tel" id="telInput" class="form-input" placeholder=" ">
+              <label for="telInput" class="form-label">Teléfono (WhatsApp)</label>
+            </div>
+
+            <div class="form-group">
+              <textarea id="messageInput" class="form-input form-textarea" placeholder=" " required></textarea>
+              <label for="messageInput" class="form-label">Tu propuesta o comentario</label>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+              Enviar Mensaje <i data-lucide="send" style="margin-left: 8px; width: 18px; height: 18px;"></i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="main-footer">
+    <div class="footer-container">
+      <a href="#" class="footer-logo">
+        Toño<span>Vázquez</span>
+      </a>
+      
+      <ul class="footer-links">
+        <li><a href="#" class="footer-link">Inicio</a></li>
+        <li><a href="#obras" class="footer-link">Obras</a></li>
+        <li><a href="#redes" class="footer-link">Redes</a></li>
+        <li><a href="#comunidad" class="footer-link">Comunidad</a></li>
+        <li><a href="#contacto" class="footer-link">Contacto</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-divider"></div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2026 Toño Vázquez. Todos los derechos reservados.</p>
+      <p>Resultados y Compromiso Social para Teziutlán, Puebla.</p>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       WHATSAPP FLOATING BUTTON
+       ========================================================================== -->
+  <a href="https://wa.me/522311234567?text=Hola%20Toño,%20me%20gustaría%20dejar%20un%20comentario." target="_blank" rel="noopener noreferrer" class="whatsapp-floating" id="whatsappFloating">
+    <span class="whatsapp-bubble">¡Escríbeme por WhatsApp!</span>
+    <div class="whatsapp-btn-circle">
+      <!-- Custom SVG WhatsApp Icon for absolute fidelity -->
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.455 5.703 1.458h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </div>
+  </a>
+
+  <!-- JavaScript Behavior -->
+  <script src="script.js"></script>
+</body>
+</html>
