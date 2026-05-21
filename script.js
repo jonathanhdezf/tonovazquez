@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contactForm');
   const formAlert = document.getElementById('formAlert');
   const submitBtn = document.getElementById('submitBtn');
-  const whatsappNumber = '522311234567';
+  const whatsappNumber = '522311514572';
   const contactEmail = 'contacto@tonovazquez.mx';
 
   const setSubmitButton = (isSending) => {
