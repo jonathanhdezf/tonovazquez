@@ -1260,13 +1260,24 @@ body.menu-open {
   line-height: 1;
 }
 
-.social-btn svg {
+.social-btn svg,
+.social-brand-icon {
   width: 19px;
   height: 19px;
   color: #ffffff;
   stroke: currentColor;
   stroke-width: 2.6;
   flex: 0 0 auto;
+}
+
+.social-brand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1;
 }
 
 .social-btn span {
@@ -1533,7 +1544,18 @@ body.menu-open {
 }
 
 .post-fb-icon {
-  color: #1877f2;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #1877f2;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1;
 }
 
 .post-text {
