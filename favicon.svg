@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Toño Vázquez">
+  <defs>
+    <linearGradient id="bg" x1="96" y1="64" x2="416" y2="448" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0a192f"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="120" fill="url(#bg)"/>
+  <path d="M96 370h320" stroke="#f97316" stroke-width="28" stroke-linecap="round"/>
+  <path d="M138 132h236v44H286v200h-60V176H138z" fill="#ffffff"/>
+  <path d="M314 176h56l-78 156h-54z" fill="#f59e0b"/>
+  <path d="M330 176h52l-78 156h-52z" fill="#ffffff" opacity=".12"/>
+</svg>
