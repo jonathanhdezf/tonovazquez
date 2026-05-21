@@ -12,6 +12,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuBtn = document.getElementById('menuBtn');
   const mobileDrawer = document.getElementById('mobileDrawer');
   const navLinks = document.querySelectorAll('.nav-link');
+  const menuCloseTriggers = document.querySelectorAll('[data-menu-close]');
+
+  const setMobileMenu = (isOpen) => {
+    menuBtn?.classList.toggle('active', isOpen);
+    mobileDrawer?.classList.toggle('active', isOpen);
+    document.body.classList.toggle('menu-open', isOpen);
+    menuBtn?.setAttribute('aria-expanded', String(isOpen));
+    mobileDrawer?.setAttribute('aria-hidden', String(!isOpen));
+  };
 
   // Change nav style on scroll
   window.addEventListener('scroll', () => {
@@ -25,10 +34,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Toggle mobile drawer
   if (menuBtn && mobileDrawer) {
     menuBtn.addEventListener('click', () => {
-      menuBtn.classList.toggle('active');
-      mobileDrawer.classList.toggle('active');
+      setMobileMenu(!mobileDrawer.classList.contains('active'));
     });
   }
+
+  menuCloseTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => setMobileMenu(false));
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileDrawer?.classList.contains('active')) {
+      setMobileMenu(false);
+    }
+  });
 
   // Close drawer and navigate when link is clicked
   navLinks.forEach(link => {
@@ -38,8 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link.classList.add('active');
 
       // Close drawer if open
-      menuBtn?.classList.remove('active');
-      mobileDrawer?.classList.remove('active');
+      setMobileMenu(false);
     });
   });
 

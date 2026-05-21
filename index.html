@@ -31,7 +31,7 @@
         <li><a href="#contacto" class="nav-link" data-sec="contacto">Contacto</a></li>
       </ul>
       
-      <button class="mobile-menu-btn" id="menuBtn" aria-label="Abrir menú">
+      <button class="mobile-menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileDrawer">
         <span></span>
         <span></span>
         <span></span>
@@ -40,12 +40,30 @@
   </nav>
 
   <!-- Mobile Drawer -->
-  <div class="mobile-drawer" id="mobileDrawer">
-    <a href="#" class="nav-link" data-sec="inicio">Inicio</a>
-    <a href="#obras" class="nav-link" data-sec="obras">Obras</a>
-    <a href="#redes" class="nav-link" data-sec="redes">Redes</a>
-    <a href="#comunidad" class="nav-link" data-sec="comunidad">Comunidad</a>
-    <a href="#contacto" class="nav-link" data-sec="contacto">Contacto</a>
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="mobile-drawer-backdrop" data-menu-close></div>
+    <div class="mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+      <div class="mobile-menu-header">
+        <div>
+          <span class="mobile-menu-kicker">Navegación</span>
+          <h2>Toño Vázquez</h2>
+        </div>
+        <button type="button" class="mobile-menu-close" aria-label="Cerrar menú" data-menu-close>
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <nav class="mobile-menu-links" aria-label="Navegación móvil">
+        <a href="#" class="nav-link" data-sec="inicio"><i data-lucide="home"></i><span>Inicio</span></a>
+        <a href="#obras" class="nav-link" data-sec="obras"><i data-lucide="hard-hat"></i><span>Obras</span></a>
+        <a href="#redes" class="nav-link" data-sec="redes"><i data-lucide="facebook"></i><span>Redes</span></a>
+        <a href="#comunidad" class="nav-link" data-sec="comunidad"><i data-lucide="users"></i><span>Comunidad</span></a>
+        <a href="#contacto" class="nav-link" data-sec="contacto"><i data-lucide="message-circle"></i><span>Contacto</span></a>
+      </nav>
+      <a href="https://wa.me/522311514572" target="_blank" rel="noopener noreferrer" class="mobile-menu-cta">
+        <i data-lucide="phone"></i>
+        <span>WhatsApp directo</span>
+      </a>
+    </div>
   </div>
 
   <!-- ==========================================================================
