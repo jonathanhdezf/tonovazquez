@@ -9,6 +9,20 @@
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <!-- Popup styles (inline to keep component self-contained) -->
+  <style>
+    .premium-popup-backdrop{position:fixed;inset:0;background:rgba(10,25,47,0.6);display:flex;align-items:center;justify-content:center;z-index:1500;opacity:0;visibility:hidden;transition:var(--transition-smooth)}
+    .premium-popup-backdrop.active{opacity:1;visibility:visible}
+    .premium-popup{max-width:520px;padding:1.5rem;border-radius:18px;position:relative;background:linear-gradient(180deg, rgba(15,23,42,0.9), rgba(15,23,42,0.82));border:1px solid rgba(255,255,255,0.04);color:var(--text-light)}
+    .premium-popup .popup-close{position:absolute;top:12px;right:12px;background:transparent;border:none;color:var(--text-light);cursor:pointer;border-radius:10px;padding:6px}
+    .premium-popup h3{margin:0 0 0.35rem 0;font-size:1.35rem}
+    .premium-popup .popup-desc{color:var(--text-muted);margin-bottom:1rem}
+    .premium-popup .popup-actions{display:flex;gap:0.75rem;margin-bottom:0.5rem}
+    .premium-popup .popup-checkbox{display:flex;align-items:center;gap:0.5rem;color:var(--text-muted);font-size:0.92rem}
+    .premium-popup input[type="checkbox"]{width:18px;height:18px;accent-color:var(--accent-warm)}
+    @media (max-width:640px){.premium-popup{margin:1rem;width:calc(100% - 2rem);max-width:100%}}
+  </style>
   
   <!-- Lucide Icons Library -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -699,6 +713,22 @@
       <p>Resultados y Compromiso Social para Teziutlán, Puebla.</p>
     </div>
   </footer>
+
+  <!-- PREMIUM SITE FOR SALE POPUP (modal) -->
+  <div class="premium-popup-backdrop" id="premiumPopupBackdrop" aria-hidden="true">
+    <div class="premium-popup glass-panel-dark" role="dialog" aria-modal="true" aria-labelledby="premiumTitle">
+      <button class="popup-close" id="premiumClose" aria-label="Cerrar"><i data-lucide="x"></i></button>
+      <div class="popup-content">
+        <h3 id="premiumTitle">Sitio en Venta — Paquetes Premium</h3>
+        <p class="popup-desc">Adquiere el paquete premium: diseño personalizado, hosting, SEO y soporte prioritario para impulsar tu presencia digital.</p>
+        <div class="popup-actions">
+          <a href="#contacto" class="btn btn-primary" id="popupContact">Solicitar Información</a>
+          <button class="btn btn-secondary" id="popupDismiss">Cerrar</button>
+        </div>
+        <label class="popup-checkbox"><input type="checkbox" id="popupDontShow"> No mostrar de nuevo</label>
+      </div>
+    </div>
+  </div>
 
   <!-- ==========================================================================
        WHATSAPP FLOATING BUTTON

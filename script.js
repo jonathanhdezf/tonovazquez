@@ -343,4 +343,48 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
   }
 
+  /* ==========================================================================
+     PREMIUM SITE FOR SALE POPUP
+     ========================================================================== */
+  const premiumBackdrop = document.getElementById('premiumPopupBackdrop');
+  const premiumClose = document.getElementById('premiumClose');
+  const popupDismiss = document.getElementById('popupDismiss');
+  const popupDontShow = document.getElementById('popupDontShow');
+  const popupContact = document.getElementById('popupContact');
+
+  const shouldShowPopup = () => {
+    try { return !localStorage.getItem('premiumPopupDismissed'); } catch (e) { return true; }
+  };
+
+  const showPremiumPopup = (delay = 3000) => {
+    if (!premiumBackdrop || !shouldShowPopup()) return;
+    setTimeout(() => {
+      premiumBackdrop.classList.add('active');
+      premiumBackdrop.setAttribute('aria-hidden','false');
+    }, delay);
+  };
+
+  const closePremiumPopup = (dontShow = false) => {
+    if (!premiumBackdrop) return;
+    premiumBackdrop.classList.remove('active');
+    premiumBackdrop.setAttribute('aria-hidden','true');
+    if (dontShow) {
+      try { localStorage.setItem('premiumPopupDismissed', '1'); } catch (e) {}
+    }
+  };
+
+  premiumBackdrop?.addEventListener('click', (e) => {
+    if (e.target === premiumBackdrop) closePremiumPopup();
+  });
+
+  premiumClose?.addEventListener('click', () => closePremiumPopup());
+  popupDismiss?.addEventListener('click', () => closePremiumPopup(popupDontShow?.checked));
+  popupContact?.addEventListener('click', () => {
+    if (popupDontShow?.checked) try { localStorage.setItem('premiumPopupDismissed','1'); } catch(e){}
+    closePremiumPopup();
+  });
+
+  // Show popup a few seconds after load
+  showPremiumPopup(4000);
+
 });
