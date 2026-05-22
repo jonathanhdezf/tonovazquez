@@ -12,13 +12,19 @@
 
   <!-- Popup styles (inline to keep component self-contained) -->
   <style>
-    .premium-popup-backdrop{position:fixed;inset:0;background:rgba(10,25,47,0.6);display:flex;align-items:center;justify-content:center;z-index:1500;opacity:0;visibility:hidden;transition:var(--transition-smooth)}
+    .premium-popup-backdrop{position:fixed;inset:0;background:linear-gradient(180deg, rgba(10,25,47,0.55), rgba(2,6,23,0.75));display:flex;align-items:center;justify-content:center;z-index:1500;opacity:0;visibility:hidden;backdrop-filter: blur(6px);-webkit-backdrop-filter: blur(6px);transition:var(--transition-smooth)}
     .premium-popup-backdrop.active{opacity:1;visibility:visible}
-    .premium-popup{max-width:520px;padding:1.5rem;border-radius:18px;position:relative;background:linear-gradient(180deg, rgba(15,23,42,0.9), rgba(15,23,42,0.82));border:1px solid rgba(255,255,255,0.04);color:var(--text-light)}
+    .premium-popup{max-width:560px;padding:1.5rem 1.75rem;border-radius:16px;position:relative;background:linear-gradient(180deg, rgba(18,24,40,0.96), rgba(12,16,30,0.9));border:1px solid rgba(245,158,11,0.12);color:var(--text-light);box-shadow:var(--shadow-float)}
     .premium-popup .popup-close{position:absolute;top:12px;right:12px;background:transparent;border:none;color:var(--text-light);cursor:pointer;border-radius:10px;padding:6px}
-    .premium-popup h3{margin:0 0 0.35rem 0;font-size:1.35rem}
-    .premium-popup .popup-desc{color:var(--text-muted);margin-bottom:1rem}
+    .premium-popup .premium-badge{display:inline-block;padding:0.35rem 0.6rem;border-radius:999px;background:linear-gradient(90deg,var(--accent-gold),var(--accent-warm));color:var(--primary-navy);font-weight:800;font-size:0.8rem;margin-bottom:0.6rem}
+    .premium-popup h3{margin:0 0 0.15rem 0;font-size:1.45rem}
+    .premium-popup .popup-sub{color:var(--text-muted);margin-bottom:0.85rem;font-weight:600}
+    .premium-popup .popup-desc{color:var(--text-muted);margin-bottom:0.9rem}
+    .premium-popup .popup-features{margin:0 0 1rem 0;padding:0 0 0 1.15rem;color:var(--text-muted)}
+    .premium-popup .popup-features li{margin-bottom:0.45rem}
+    .premium-popup .price-line{font-weight:800;color:var(--accent-gold);margin-bottom:0.7rem}
     .premium-popup .popup-actions{display:flex;gap:0.75rem;margin-bottom:0.5rem}
+    .premium-popup .popup-actions .btn-primary{background:linear-gradient(135deg,var(--accent-gold),var(--accent-warm));}
     .premium-popup .popup-checkbox{display:flex;align-items:center;gap:0.5rem;color:var(--text-muted);font-size:0.92rem}
     .premium-popup input[type="checkbox"]{width:18px;height:18px;accent-color:var(--accent-warm)}
     @media (max-width:640px){.premium-popup{margin:1rem;width:calc(100% - 2rem);max-width:100%}}
@@ -719,10 +725,21 @@
     <div class="premium-popup glass-panel-dark" role="dialog" aria-modal="true" aria-labelledby="premiumTitle">
       <button class="popup-close" id="premiumClose" aria-label="Cerrar"><i data-lucide="x"></i></button>
       <div class="popup-content">
-        <h3 id="premiumTitle">Sitio en Venta — Paquetes Premium</h3>
-        <p class="popup-desc">Adquiere el paquete premium: diseño personalizado, hosting, SEO y soporte prioritario para impulsar tu presencia digital.</p>
+        <span class="premium-badge">Paquete Premium</span>
+        <h3 id="premiumTitle">Sitio Web Profesional a la Venta</h3>
+        <div class="popup-sub">Diseño exclusivo · Hosting · SEO · Soporte prioritario</div>
+        <p class="popup-desc">Lleva tu presencia digital al siguiente nivel con una web optimizada para conversiones y rendimiento.</p>
+        <div class="popup-features">
+          <ul>
+            <li>Diseño responsive personalizado</li>
+            <li>Optimización SEO inicial</li>
+            <li>Hosting seguro y backup diario</li>
+            <li>Soporte prioritario 30 días</li>
+          </ul>
+        </div>
+        <div class="price-line">Desde $6,999 MXN (pago único) · Planes a medida</div>
         <div class="popup-actions">
-          <a href="#contacto" class="btn btn-primary" id="popupContact">Solicitar Información</a>
+          <a href="https://wa.me/522311024672?text=Hola%2C%20estoy%20interesado%20en%20el%20Paquete%20Premium%20para%20el%20sitio%20web.%20Por%20favor%20cont%C3%A1ctame%20para%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="popupContact">Contactar por WhatsApp</a>
           <button class="btn btn-secondary" id="popupDismiss">Cerrar</button>
         </div>
         <label class="popup-checkbox"><input type="checkbox" id="popupDontShow"> No mostrar de nuevo</label>
